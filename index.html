@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <title>GaryGarryson — Покерный фонд с полным финансированием</title>
+  <meta
+    content="Хочешь зарабатывать в покере? Мы обучаем игроков в фонд с полным финансированием игры. Профессиональное обучение PLO."
+    name="description" />
+  <meta content="GaryGarryson — Покерный фонд" property="og:title" />
+  <meta content="Мы обучаем игроков в фонд с полным финансированием игры." property="og:description" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link
+    href="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/css/gtowizard-landing-page.webflow.shared.1ba11dc37.css"
+    rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Fonts — Inter everywhere */
+    body {
+      font-family: 'Inter', sans-serif !important;
+      cursor: none !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    .hero-head,
+    .title-head,
+    .cta_head,
+    .footer_title,
+    .hero-stat-value,
+    .step-number,
+    .label,
+    .span-green {
+      font-family: 'Inter', sans-serif !important;
+      text-transform: none !important;
+    }
+
+    a,
+    button,
+    .w-button,
+    .nav_link,
+    .accord_triger {
+      cursor: none !important;
+    }
+
+    /* Interactive cursor */
+    .cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background: #aafbb2;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99999;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s, height 0.2s, background 0.2s;
+    }
+
+    .cursor-ring {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid rgba(170, 251, 178, 0.5);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 99998;
+      transform: translate(-50%, -50%);
+      transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+    }
+
+    .cursor-dot.hover {
+      width: 16px;
+      height: 16px;
+      background: rgba(170, 251, 178, 0.8);
+    }
+
+    .cursor-ring.hover {
+      width: 50px;
+      height: 50px;
+      border-color: rgba(170, 251, 178, 0.3);
+    }
+
+    .w-slider-nav {
+      display: none;
+    }
+
+    ::selection {
+      background: rgba(170, 251, 178, 0.2);
+    }
+
+    ::-moz-selection {
+      background: rgba(170, 251, 178, 0.2);
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    *[tabindex]:focus-visible,
+    input[type="file"]:focus-visible {
+      outline: 0.125rem solid #4d65ff;
+      outline-offset: 0.125rem;
+    }
+
+    .container-medium,
+    .container-small,
+    .container-large {
+      margin-right: auto !important;
+      margin-left: auto !important;
+    }
+
+    .hide {
+      display: none !important;
+    }
+
+    @media (min-width: 992px) {
+      .item_title {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        will-change: transform;
+      }
+
+      .features_div_wrap .card_par {
+        opacity: 0;
+      }
+    }
+
+    .card_par {
+      display: inline !important
+    }
+
+    /* Fund cards block 2 — always show */
+    .s-features .features_div_wrap .card_par {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    .s-features .features_div_wrap .item_title {
+      position: static !important;
+      bottom: auto !important;
+    }
+
+    /* Rainbow button colors — green theme */
+    :root {
+      --color-1: 130 80% 60%;
+      --color-2: 160 90% 55%;
+      --color-3: 100 70% 55%;
+      --color-4: 180 70% 50%;
+      --color-5: 80 80% 55%;
+    }
+
+    /* Rainbow button effect — green site background */
+    .rainbow-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif !important;
+      color: #000;
+      border: none;
+      border-radius: 0.75rem;
+      cursor: none;
+      text-decoration: none;
+      background:
+        linear-gradient(#aafbb2, #aafbb2),
+        linear-gradient(#aafbb2 50%, rgba(170, 251, 178, 0.6) 80%, rgba(170, 251, 178, 0)),
+        linear-gradient(90deg, hsl(var(--color-1)), hsl(var(--color-5)), hsl(var(--color-3)), hsl(var(--color-4)), hsl(var(--color-2)));
+      background-size: 200%;
+      background-clip: padding-box, border-box, border-box;
+      background-origin: border-box;
+      border: 2px solid transparent;
+      animation: rainbow 3s infinite linear;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      z-index: 1;
+    }
+
+    .rainbow-btn::before {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: 50%;
+      z-index: -1;
+      height: 30%;
+      width: 70%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, hsl(var(--color-1)), hsl(var(--color-5)), hsl(var(--color-3)), hsl(var(--color-4)), hsl(var(--color-2)));
+      background-size: 200%;
+      filter: blur(1rem);
+      animation: rainbow 3s infinite linear;
+      opacity: 0.6;
+    }
+
+    .rainbow-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(170, 251, 178, 0.28);
+      color: #000;
+    }
+
+    @keyframes rainbow {
+      0% {
+        background-position: 0%;
+      }
+
+      100% {
+        background-position: 200%;
+      }
+    }
+
+    /* 7. Bold card headings */
+    .who-card h3,
+    .step-card h3,
+    .item_title,
+    .fund-info-card h3 {
+      font-weight: 700 !important;
+    }
+
+    /* Ripple button effect */
+    .button.w-button {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .button.w-button .ripple-wave {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(0);
+      animation: ripple-click 0.7s ease-out forwards;
+      pointer-events: none;
+    }
+
+    @keyframes ripple-click {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+
+    /* Stats bar */
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 2.5rem;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      overflow: hidden;
+      position: relative;
+      z-index: 5;
+    }
+
+    .hero-stat {
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .hero-stat:last-child {
+      border-right: none;
+    }
+
+    .hero-stat-value {
+      color: #aafbb2;
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-stat-label {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 767px) {
+      .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-stat:nth-child(2) {
+        border-right: none;
+      }
+
+      .hero-stat:nth-child(1),
+      .hero-stat:nth-child(2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .hero-stat-value {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* 5. Hero top spacing */
+    .s-lphero .padding-section-large {
+      padding-top: 8rem !important;
+    }
+
+    /* Steps */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 767px) {
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .step-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .step-card:hover {
+      background: rgba(170, 251, 178, 0.05);
+      border-color: rgba(170, 251, 178, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(170, 251, 178, 0.1);
+      color: #aafbb2;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .step-card h3 {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    /* Disclaimer */
+    .disclaimer-fund {
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 2.5rem 0;
+      width: 100%;
+      padding: 1.5rem 2rem;
+      background: rgba(170, 251, 178, 0.03);
+      border: 1px solid rgba(170, 251, 178, 0.08);
+      border-radius: 0.75rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Who cards */
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      width: 100%;
+    }
+
+    @media (max-width: 991px) {
+      .who-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 567px) {
+      .who-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .who-card {
+      background: linear-gradient(160deg, rgba(170, 251, 178, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+      border: 1px solid rgba(170, 251, 178, 0.1);
+      border-radius: 1.25rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .who-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #aafbb2, transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .who-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(170, 251, 178, 0.25);
+      box-shadow: 0 12px 40px rgba(170, 251, 178, 0.08);
+    }
+
+    .who-card:hover::before {
+      opacity: 1;
+    }
+
+    .who-card-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(170, 251, 178, 0.08);
+      margin-bottom: 1.25rem;
+    }
+
+    .who-card h3 {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .who-card p {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin-top: 0.5rem;
+    }
+
+    /* Negative cards — same format as positive */
+    .who-card.negative {
+      background: linear-gradient(160deg, rgba(255, 80, 80, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+      border-color: rgba(255, 80, 80, 0.12);
+    }
+
+    .who-card.negative::before {
+      background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+    }
+
+    .who-card.negative:hover {
+      border-color: rgba(255, 80, 80, 0.3);
+      box-shadow: 0 12px 40px rgba(255, 80, 80, 0.06);
+    }
+
+    .who-card.negative .who-card-icon {
+      background: rgba(255, 80, 80, 0.08);
+    }
+
+    .who-card.negative h3 {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .who-card.negative p {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    /* CTA s-joinus background from GTO reference */
+    .s-cta {
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 50% 0%, rgba(170, 251, 178, 0.1) 0%, rgba(170, 251, 178, 0.04) 30%, transparent 65%);
+    }
+
+    .s-cta .cta_wrap {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===== FAQ — shadcn card style, dark theme ===== */
+    .faq_wrap {
+      width: 100%;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02);
+      overflow: hidden;
+    }
+
+    .accord_item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+      background: transparent !important;
+      border-radius: 0 !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      padding: 0 !important;
+    }
+
+    .accord_item:last-child {
+      border-bottom: none !important;
+    }
+
+    .accord_triger {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 1rem 1.25rem !important;
+      cursor: none;
+      gap: 1.5rem;
+      user-select: none;
+      transition: background 0.15s ease;
+    }
+
+    .accord_triger:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .question-txt {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: #fff;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .accord_icon_wrap {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease;
+    }
+
+    .accord_icon_wrap svg path {
+      transition: stroke 0.2s ease;
+    }
+
+    .accord_item.is-active .accord_icon_wrap {
+      transform: rotate(180deg);
+    }
+
+    .accord_item.is-active .accord_icon_wrap svg path {
+      stroke: #aafbb2;
+    }
+
+    .accord_answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+
+    .accord_par {
+      padding: 0 1.25rem 1.25rem !important;
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.65;
+      margin: 0 !important;
+    }
+
+    .accord_par p {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .accord_par p:last-child {
+      margin-bottom: 0;
+    }
+
+    .accord_par ul {
+      list-style: disc;
+      margin: 0.35rem 0 0.6rem 1.15rem;
+      padding: 0;
+    }
+
+    .accord_par ul li {
+      margin-bottom: 0.2rem;
+    }
+
+    .accord_par strong {
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 600;
+    }
+
+    /* FAQ bottom padding */
+    .s-faq .padding-section-medium {
+      padding-bottom: 8rem !important;
+    }
+
+    /* 11. Coach section consistent top padding */
+    .s-study .padding-section-medium {
+      padding-top: 4rem !important;
+    }
+
+.who-section-label {
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .who-section-label h3 {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .who-bottom-cta {
+      margin-top: 2.5rem;
+      text-align: center;
+      color: #aafbb2;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    /* Fund info cards */
+    .fund-info-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .fund-info-card:hover {
+      background: rgba(170, 251, 178, 0.04);
+      border-color: rgba(170, 251, 178, 0.12);
+    }
+
+    .fund-info-card h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .fund-info-card p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  </style>
+
+  <!-- Finsweet Attributes -->
+  <script async type="module" src="https://cdn.jsdelivr.net/npm/@finsweet/attributes@2/attributes.js"
+    fs-scrolldisable></script>
+
+</head>
+
+<body>
+  <!-- Interactive cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <main class="main-wrapper">
+    <div data-w-id="fdd54609-b973-a55b-d634-eaf06905128c" class="trigger"></div>
+    <div class="global-styles w-embed"></div>
+
+    <!-- ============================================================ -->
+    <!-- NAVIGATION -->
+    <!-- ============================================================ -->
+    <div class="nav">
+      <div data-animation="over-left" class="nav_component w-nav" data-easing2="ease"
+        fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium"
+        data-w-id="5433c634-db3a-b2c1-4540-cc7ee81b1f48" role="banner" data-duration="400" data-doc-height="1">
+        <div class="container-medium is-noborder">
+          <div class="nav_container">
+            <a href="#hero" class="nav_brand w-nav-brand" style="text-decoration:none;">
+              <span style="color:#fff; font-size:1.25rem; font-weight:700; letter-spacing:-0.02em;">GaryGarryson</span>
+            </a>
+            <nav role="navigation" class="nav_menu w-nav-menu">
+              <div class="nav_menulink_wrap">
+                <a href="#fund" class="nav_link w-nav-link">Что такое фонд</a>
+                <a href="#coach" class="nav_link w-nav-link">Наставник</a>
+                <a href="#benefits" class="nav_link w-nav-link">Что даёт команда</a>
+                <a href="#who" class="nav_link w-nav-link">Кому подходит</a>
+                <a href="#steps" class="nav_link w-nav-link">Отбор</a>
+                <a href="#FAQ" class="nav_link w-nav-link">FAQ</a>
+              </div>
+            </nav>
+            <div class="nav_button-wrapper">
+              <a href="#apply" class="button is-nav w-button"><strong>Подать заявку</strong></a>
+              <div class="menu-button w-nav-button">
+                <div class="burger-1">
+                  <div class="b1-bar1"></div>
+                  <div class="b1-bar2">
+                    <div class="b1-middle"></div>
+                  </div>
+                  <div class="b1-bar3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav_bg is-top"></div>
+        <div class="nav_bg is-bottom"></div>
+      </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- BLOCK 1 — HERO -->
+    <!-- ============================================================ -->
+    <section id="hero" class="s-lphero">
+      <div class="padding-global is-hero">
+        <div class="container-medium relative min-100vh">
+          <div class="padding-section-large">
+            <div class="container-small home-hero">
+              <div class="gap-large homehero_wrap">
+                <h1 class="hero-head">Хочешь<br />зарабатывать<br />в покере?</h1>
+                <p class="text-subhead"
+                  style="color: rgba(255,255,255,0.7); font-size: 1.25rem; margin-bottom: 1rem; max-width: 420px;">Мы
+                  обучаем игроков в фонд<br />с полным финансированием игры.</p>
+                <a href="#apply" class="rainbow-btn">Подать заявку в фонд</a>
+                <!-- Stats bar -->
+                <div class="hero-stats">
+                  <div class="hero-stat">
+                    <div class="hero-stat-value">$600k+</div>
+                    <div class="hero-stat-label">Выиграно за год</div>
+                  </div>
+                  <div class="hero-stat">
+                    <div class="hero-stat-value">10 лет</div>
+                    <div class="hero-stat-label">Опыт в PLO</div>
+                  </div>
+                  <div class="hero-stat">
+                    <div class="hero-stat-value">$10k</div>
+                    <div class="hero-stat-label">Макс. бай-ин</div>
+                  </div>
+                  <div class="hero-stat">
+                    <div class="hero-stat-value">100%</div>
+                    <div class="hero-stat-label">Финансирование</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img loading="lazy"
+            src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992a6f967054e9dea43b2_Green%20Splitter.svg"
+            alt="" class="border-icon_left hide-mobile" />
+          <img loading="lazy"
+            src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992c8f124bd7d1baa1923_Green%20Splitter%20(1).svg"
+            alt="" class="border-icon_right hide-mobile" />
+          <div class="borderline bottom"></div>
+          <div class="header-txtwrap"></div>
+          <div class="header-txtwrap">
+            <div>
+              <span>Гарри Гаррисон<br /></span>
+              <span class="span">Профессиональный PLO игрок</span>
+            </div>
+          </div>
+          <img width="1124" sizes="(max-width: 1439px) 100vw, 1124px" alt="Гарри — профессиональный игрок PLO"
+            src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68f137729fdf44114ef530e4_image-espen.avif"
+            loading="eager"
+            srcset="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68f137729fdf44114ef530e4_image-espen-p-500.avif 500w, https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68f137729fdf44114ef530e4_image-espen-p-800.avif 800w, https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68f137729fdf44114ef530e4_image-espen.avif 2248w"
+            class="header_image" />
+        </div>
+      </div>
+      <div class="bg_hero"></div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BLOCK 2 — ЧТО ТАКОЕ ФОНД -->
+    <!-- ============================================================ -->
+    <section id="fund" class="s-features">
+      <div class="padding-global">
+        <div class="container-medium">
+          <div class="padding-section-medium">
+            <div class="container-small">
+              <div class="gap-huge align-center">
+                <div class="gap-medium align-center">
+                  <div class="label">
+                    <p class="span-green">О фонде</p>
+                  </div>
+                  <h2 class="title-head"><span class="span-green">Что значит</span> играть в фонде?</h2>
+                  <p class="text-subhead">Фонд — это модель, при которой команда финансирует игру игрока.<br />Ты не
+                    используешь собственные деньги. Команда предоставляет банкролл.</p>
+                </div>
+
+                <div class="gap-large">
+                <div class="w-layout-grid grid_3col">
+                  <div class="features_div_wrap max_height"
+                    style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 2.5rem 1.5rem; text-align:center;">
+                    <div style="margin-bottom:1rem;">
+                      <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="24" fill="rgba(170,251,178,0.1)" /><text x="24" y="30"
+                          text-anchor="middle" fill="#aafbb2" font-size="22" font-weight="700">$</text>
+                      </svg>
+                    </div>
+                    <h3 class="item_title"
+                      style="position:static; color:#fff; font-size:1.15rem; font-weight:600; margin-bottom:0.5rem;">
+                      Финансирование</h3>
+                    <p class="card_par" style="opacity:1; color:rgba(255,255,255,0.6); font-size:0.95rem;">Ты играешь на
+                      выделенные средства. Прибыль делится по прозрачной системе.</p>
+                  </div>
+
+                  <div class="features_div_wrap"
+                    style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 2.5rem 1.5rem; text-align:center;">
+                    <div style="margin-bottom:1rem;">
+                      <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="24" fill="rgba(170,251,178,0.1)" /><text x="24" y="30"
+                          text-anchor="middle" fill="#aafbb2" font-size="20" font-weight="700">↑</text>
+                      </svg>
+                    </div>
+                    <h3 class="item_title"
+                      style="position:static; color:#fff; font-size:1.15rem; font-weight:600; margin-bottom:0.5rem;">
+                      Рост по лимитам</h3>
+                    <p class="card_par" style="opacity:1; color:rgba(255,255,255,0.6); font-size:0.95rem;">Сосредоточься
+                      на качестве решений и расти быстрее без финансового давления.</p>
+                  </div>
+
+                  <div class="features_div_wrap max_height"
+                    style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding: 2.5rem 1.5rem; text-align:center;">
+                    <div style="margin-bottom:1rem;">
+                      <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="24" fill="rgba(170,251,178,0.1)" /><text x="24" y="30"
+                          text-anchor="middle" fill="#aafbb2" font-size="20" font-weight="700">★</text>
+                      </svg>
+                    </div>
+                    <h3 class="item_title"
+                      style="position:static; color:#fff; font-size:1.15rem; font-weight:600; margin-bottom:0.5rem;">
+                      Профессиональный подход</h3>
+                    <p class="card_par" style="opacity:1; color:rgba(255,255,255,0.6); font-size:0.95rem;">Покер
+                      становится управляемой профессиональной деятельностью, а не хаотичной игрой.</p>
+                  </div>
+                </div>
+
+                <div class="disclaimer-fund" style="margin-top: 1.25rem;">
+                  В фонде ты снижаешь финансовые риски, убираешь давление «игры на последние» и сосредотачиваешься на
+                  качестве решений.
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="border">
+              <div class="borderline"></div>
+              <img loading="lazy"
+                src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992a6f967054e9dea43b2_Green%20Splitter.svg"
+                alt="" class="border-icon_left" />
+              <img loading="lazy"
+                src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992c8f124bd7d1baa1923_Green%20Splitter%20(1).svg"
+                alt="" class="border-icon_right" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BLOCK 3 — КТО СТОИТ ЗА СИСТЕМОЙ -->
+    <!-- ============================================================ -->
+    <section id="coach" class="s-study">
+      <div class="padding-global">
+        <div class="container-medium">
+          <div class="padding-section-medium">
+            <div class="container-small relative">
+              <div class="gap-huge align-center">
+                <div class="gap-medium align-center">
+                  <div class="label">
+                    <p class="span-green">Наставник</p>
+                  </div>
+                  <h2 class="title-head"><span class="span-green">Кто стоит</span> за системой</h2>
+                  <p class="text-subhead">Гарри — профессиональный игрок в PLO с 10-летним опытом.<br />Регулярно играет
+                    столы от 1k$ до 10k$ бай-ина.</p>
+                </div>
+
+                <div class="gap-large">
+                  <div class="grid-2coll">
+                    <div class="features_div_wrap min" style="overflow:hidden;">
+                      <img
+                        src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d5046f2c0beae04482c35d_ai-solver-default.avif"
+                        loading="eager" width="592" sizes="(max-width: 767px) 100vw, 592px" alt="Статистика Гарри"
+                        srcset="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d5046f2c0beae04482c35d_ai-solver-default-p-500.avif 500w, https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d5046f2c0beae04482c35d_ai-solver-default.avif 1184w"
+                        class="image_card" />
+                      <img
+                        src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d5046f936a1f96e57f18fc_ai-solver-hover.avif"
+                        loading="eager" width="594" sizes="(max-width: 767px) 100vw, 594px" alt=""
+                        srcset="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d5046f936a1f96e57f18fc_ai-solver-hover-p-500.avif 500w, https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d5046f936a1f96e57f18fc_ai-solver-hover.avif 1184w"
+                        class="image_card_hover" />
+                      <div class="text_wrap">
+                        <div class="show_on_hover">
+                          <h3 class="item_title">10+ лет опыта в PLO</h3>
+                          <p class="card_par">Регулярные столы от $1k до $10k бай-ина. Доказанные результаты на длинной
+                            дистанции.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="features_div_wrap min" style="overflow:hidden;">
+                      <div class="text_wrap full">
+                        <div class="show_on_hover">
+                          <h3 class="item_title">$600,000+ за прошлый год</h3>
+                          <p class="card_par">Стабильные результаты, подтверждённые графиками и статистикой.</p>
+                        </div>
+                      </div>
+                      <img
+                        src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d5046fb3f184ec1e5893f9_library-of-solutions-default.avif"
+                        loading="eager" width="592" sizes="(max-width: 767px) 100vw, 592px" alt="Результаты Гарри"
+                        srcset="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d5046fb3f184ec1e5893f9_library-of-solutions-default-p-500.avif 500w, https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d5046fb3f184ec1e5893f9_library-of-solutions-default.avif 1184w"
+                        class="image_card" />
+                      <img
+                        src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68cc043543829211fbdad0cb_library-of-solutions-hover.avif"
+                        loading="eager" width="594" sizes="(max-width: 767px) 100vw, 594px" alt=""
+                        srcset="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68cc043543829211fbdad0cb_library-of-solutions-hover-p-500.avif 500w, https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68cc043543829211fbdad0cb_library-of-solutions-hover.avif 1188w"
+                        class="image_card_hover" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68aa3681e6a3075a7b739bcf_green-glow.svg"
+          loading="lazy" alt="" class="glow-bg" />
+        <div class="border">
+          <div class="borderline"></div>
+          <img loading="lazy"
+            src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992a6f967054e9dea43b2_Green%20Splitter.svg"
+            alt="" class="border-icon_left" />
+          <img loading="lazy"
+            src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992c8f124bd7d1baa1923_Green%20Splitter%20(1).svg"
+            alt="" class="border-icon_right" />
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BLOCK 4 — ЧТО ДАЁТ КОМАНДА -->
+    <!-- ============================================================ -->
+    <section id="benefits" class="s-practice">
+      <div class="padding-global">
+        <div class="container-medium">
+          <div class="padding-section-medium">
+            <div class="container-small relative">
+              <div class="gap-huge align-center">
+                <div class="gap-medium align-center">
+                  <div class="label">
+                    <p class="span-green">Преимущества</p>
+                  </div>
+                  <h2 class="title-head"><span class="span-green">Что даёт</span> команда</h2>
+                </div>
+
+                <div class="gap-large">
+                  <div class="grid_3col">
+                    <div class="features_div_wrap" style="padding:2rem;">
+                      <img
+                        src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d418bc4df07545fdd0fceb_analyze-anchor.avif"
+                        loading="eager" width="384" alt="Полное финансирование" class="image_card" />
+                      <img
+                        src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d41970c55cd06c3bfed7ea_analyze-anchor-hover.avif"
+                        loading="eager" width="384" alt="" class="image_card_hover" />
+                      <div class="text_wrap">
+                        <div class="show_on_hover">
+                          <h3 class="item_title">Полное финансирование</h3>
+                          <p class="card_par">Играешь не на свои деньги. Фонд берёт на себя финансовую сторону.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="features_div_wrap" style="padding:2rem;">
+                      <img
+                        src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d418bc60f38d726c72556f_study-anchor.avif"
+                        loading="eager" width="384" alt="Профессиональное обучение" class="image_card" />
+                      <img
+                        src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d41970a26886c16e1a55a2_study-anchor-hover.avif"
+                        loading="eager" width="384" alt="" class="image_card_hover" />
+                      <div class="text_wrap">
+                        <div class="show_on_hover">
+                          <h3 class="item_title">Профессиональное обучение</h3>
+                          <p class="card_par">Разборы игры, стратегическая база, контроль дистанции, анализ ошибок.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="features_div_wrap" style="padding:2rem;">
+                      <img
+                        src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d418bc36bdcc05e759f0f4_practice-anchor.avif"
+                        loading="eager" width="384" alt="Сообщество" class="image_card" />
+                      <img
+                        src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68d41970acdc5e5594470eab_practice-anchor-hover.avif"
+                        loading="eager" width="384" alt="" class="image_card_hover" />
+                      <div class="text_wrap">
+                        <div class="show_on_hover">
+                          <h3 class="item_title">Сообщество и обмен опытом</h3>
+                          <p class="card_par">Совместные разборы, поддержка в сложные периоды, среда, в которой рост —
+                            норма.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="disclaimer-fund" style="margin-top: 1.25rem;">
+                    Ты получаешь систему, деньги в управлении и среду для роста.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68ab1207c7c76b0ed6ac1f95_blue-glow.svg"
+          loading="lazy" alt="" class="glow-bg" />
+        <div class="border">
+          <div class="borderline"></div>
+          <img loading="lazy"
+            src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992a6f967054e9dea43b2_Green%20Splitter.svg"
+            alt="" class="border-icon_left" />
+          <img loading="lazy"
+            src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992c8f124bd7d1baa1923_Green%20Splitter%20(1).svg"
+            alt="" class="border-icon_right" />
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BLOCK 5 — КОГО МЫ БЕРЁМ -->
+    <!-- ============================================================ -->
+    <section id="who" class="s-analyze">
+      <div class="padding-global">
+        <div class="container-medium">
+          <div class="padding-section-medium">
+            <div class="container-small relative">
+              <div class="gap-huge align-center">
+                <div class="gap-medium align-center">
+                  <div class="label">
+                    <p class="span-green">Отбор</p>
+                  </div>
+                  <h2 class="title-head"><span class="span-green">Кто нам</span> подходит</h2>
+                  <p class="text-subhead">Мы ищем игроков — молодых людей не старше 30 лет,<br />которые хотят сделать
+                    покер основным источником дохода.</p>
+                </div>
+
+                <div class="who-grid">
+                  <div class="who-card">
+                    <div class="who-card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#aafbb2" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                          d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z" />
+                        <path d="M9 21h6" />
+                        <path d="M10 17v4" />
+                        <path d="M14 17v4" />
+                      </svg>
+                    </div>
+                    <h3>Аналитический склад ума</h3>
+                    <p>Умение думать, считать и анализировать решения</p>
+                  </div>
+                  <div class="who-card">
+                    <div class="who-card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#aafbb2" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                      </svg>
+                    </div>
+                    <h3>5+ часов в день</h3>
+                    <p>Готовность уделять обучению и игре достаточно времени</p>
+                  </div>
+                  <div class="who-card">
+                    <div class="who-card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#aafbb2" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <circle cx="12" cy="12" r="6" />
+                        <circle cx="12" cy="12" r="2" />
+                      </svg>
+                    </div>
+                    <h3>Дисциплина и системность</h3>
+                    <p>Последовательность в работе над собой и своей игрой</p>
+                  </div>
+                  <div class="who-card">
+                    <div class="who-card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#aafbb2" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="1" x2="12" y2="23" />
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                      </svg>
+                    </div>
+                    <h3>Покер как доход</h3>
+                    <p>Цель — сделать покер основным источником заработка</p>
+                  </div>
+                </div>
+
+                <div class="gap-medium align-center" style="margin-top: 3rem;">
+                  <h2 class="title-head"><span style="color: rgba(255,100,100,0.7)">Мы НЕ</span> ищем</h2>
+                  <p class="text-subhead">Эти качества несовместимы с форматом нашей работы.</p>
+                </div>
+
+                <div class="who-grid">
+                  <div class="who-card negative">
+                    <div class="who-card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M8 14s1.5 2 4 2 4-2 4-2" transform="scale(1,-1) translate(0,-24)" />
+                        <line x1="9" y1="9" x2="9.01" y2="9" />
+                        <line x1="15" y1="9" x2="15.01" y2="9" />
+                      </svg>
+                    </div>
+                    <h3>Азартных игроков</h3>
+                    <p>Тех, кто ищет острых ощущений, а не системной работы</p>
+                  </div>
+                  <div class="who-card negative">
+                    <div class="who-card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="1" x2="12" y2="23" />
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        <line x1="1" y1="1" x2="23" y2="23" stroke-width="2" />
+                      </svg>
+                    </div>
+                    <h3>Лёгкие деньги</h3>
+                    <p>Тех, кто надеется разбогатеть быстро и без усилий</p>
+                  </div>
+                  <div class="who-card negative">
+                    <div class="who-card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                        <line x1="7" y1="7" x2="17" y2="19" stroke-width="2" />
+                      </svg>
+                    </div>
+                    <h3>Без дисциплины</h3>
+                    <p>Людей, не готовых к регулярной и структурированной работе</p>
+                  </div>
+                  <div class="who-card negative">
+                    <div class="who-card-icon">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        <line x1="4" y1="4" x2="20" y2="20" stroke-width="2" />
+                      </svg>
+                    </div>
+                    <h3>Не готовых учиться</h3>
+                    <p>Тех, кто не хочет вкладывать время в обучение</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border">
+          <div class="borderline"></div>
+          <img loading="lazy"
+            src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992a6f967054e9dea43b2_Green%20Splitter.svg"
+            alt="" class="border-icon_left" />
+          <img loading="lazy"
+            src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992c8f124bd7d1baa1923_Green%20Splitter%20(1).svg"
+            alt="" class="border-icon_right" />
+        </div>
+        <img src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68ad9410dd706089d80db488_light-blur.svg"
+          loading="lazy" alt="" class="glow-bg" />
+      </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BLOCK 6 — КАК ПРОХОДИТ ОТБОР -->
+    <!-- ============================================================ -->
+    <section id="steps" class="s-content">
+      <div class="padding-global">
+        <div class="container-medium">
+          <div class="padding-section-medium">
+            <div class="container-small relative">
+              <div class="gap-huge align-center">
+                <div class="gap-medium align-center">
+                  <div class="label">
+                    <p class="span-green">Процесс</p>
+                  </div>
+                  <h2 class="title-head"><span class="span-green">Как проходит</span> отбор</h2>
+                </div>
+
+                <div class="steps-grid" style="width:100%;">
+                  <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Ты оставляешь заявку</h3>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Мы анализируем твой опыт и подход</h3>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>При необходимости даём тестовый период</h3>
+                  </div>
+                  <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>При успешном прохождении — подключаем к фонду</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68aa3681e6a3075a7b739bcf_green-glow.svg"
+          loading="lazy" alt="" class="glow-bg" />
+        <div class="border">
+          <div class="borderline"></div>
+          <img loading="lazy"
+            src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992a6f967054e9dea43b2_Green%20Splitter.svg"
+            alt="" class="border-icon_left" />
+          <img loading="lazy"
+            src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992c8f124bd7d1baa1923_Green%20Splitter%20(1).svg"
+            alt="" class="border-icon_right" />
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BLOCK 7 — FAQ -->
+    <!-- ============================================================ -->
+    <section id="FAQ" class="s-faq">
+      <div class="padding-global">
+        <div class="container-medium">
+          <div class="padding-section-medium">
+            <div class="container-small relative">
+              <div class="gap-huge">
+                <div class="gap-medium align-center">
+                  <div class="label">
+                    <p class="span-green">FAQ</p>
+                  </div>
+                  <h2 class="title-head">Вопросы, которые реально<br>волнуют новичка</h2>
+                </div>
+                <div class="faq_wrap">
+
+                  <div class="accord_item">
+                    <div class="accord_triger">
+                      <div class="question-txt">Что нужно, чтобы попасть на обучение?</div>
+                      <div class="accord_icon_wrap">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="accord_answer">
+                      <div class="accord_par">
+                        <p>Минимальный набор:</p>
+                        <ul>
+                          <li>компьютер или ноутбук</li>
+                          <li>стабильный интернет</li>
+                          <li>готовность регулярно учиться и играть</li>
+                        </ul>
+                        <p>Опыт в покере <strong>не обязателен</strong> — мы обучаем с нуля.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accord_item">
+                    <div class="accord_triger">
+                      <div class="question-txt">Можно совмещать обучение и основную работу?</div>
+                      <div class="accord_icon_wrap">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="accord_answer">
+                      <div class="accord_par">
+                        <p>Да, <strong>на старте можно совмещать</strong>, если ты готов уделять обучению и игре достаточно времени.</p>
+                        <p>Важно понимать: чем больше внимания ты уделяешь процессу, тем быстрее будет прогресс.</p>
+                        <p>Мы помогаем выстроить нагрузку, чтобы обучение не превращалось в хаос.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accord_item">
+                    <div class="accord_triger">
+                      <div class="question-txt">Нужны ли какие-то вложения?</div>
+                      <div class="accord_icon_wrap">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="accord_answer">
+                      <div class="accord_par">
+                        <p>Нет. Фонд полностью финансирует игру. Ты не вкладываешь собственные деньги.</p>
+                        <p>Все финансовые риски берёт на себя команда.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accord_item">
+                    <div class="accord_triger">
+                      <div class="question-txt">Сколько времени нужно в неделю?</div>
+                      <div class="accord_icon_wrap">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="accord_answer">
+                      <div class="accord_par">
+                        <p>В среднем — <strong>около 30 часов в неделю</strong>.</p>
+                        <p>Это время распределяется между:</p>
+                        <ul>
+                          <li>обучением</li>
+                          <li>практикой</li>
+                          <li>разборами и заданиями</li>
+                        </ul>
+                        <p>Если у тебя меньше времени — мы честно скажем, подойдёт ли формат именно тебе.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accord_item">
+                    <div class="accord_triger">
+                      <div class="question-txt">Что я буду делать <strong>каждый день</strong>?</div>
+                      <div class="accord_icon_wrap">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="accord_answer">
+                      <div class="accord_par">
+                        <p>На старте обучение строится по этапам.</p>
+                        <p><strong>Первый этап — обучение и база:</strong></p>
+                        <ul>
+                          <li>изучение логики игры</li>
+                          <li>разбор типовых ситуаций</li>
+                          <li>понимание решений за столом</li>
+                        </ul>
+                        <p><strong>Далее — практика и игра:</strong></p>
+                        <ul>
+                          <li>тренировки</li>
+                          <li>игра на низких лимитах <strong>за счёт команды</strong></li>
+                        </ul>
+                        <p>Если ты показываешь дисциплину и прогресс, со временем переходишь на более высокие лимиты.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accord_item">
+                    <div class="accord_triger">
+                      <div class="question-txt">Можно ли начать <strong>с нуля, без опыта вообще</strong>?</div>
+                      <div class="accord_icon_wrap">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="accord_answer">
+                      <div class="accord_par">
+                        <p>Да.</p>
+                        <p>Мы изначально ориентированы на новичков.</p>
+                        <p>Все материалы и разборы выстроены так, чтобы:</p>
+                        <ul>
+                          <li>объяснять простым языком</li>
+                          <li>идти от базы к более сложным вещам</li>
+                          <li>не перегружать терминологией</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accord_item">
+                    <div class="accord_triger">
+                      <div class="question-txt">Есть ли отбор и почему?</div>
+                      <div class="accord_icon_wrap">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="accord_answer">
+                      <div class="accord_par">
+                        <p>Да, отбор есть.</p>
+                        <p>Он нужен не для проверки знаний, а потому что:</p>
+                        <ul>
+                          <li>мы работаем в ограниченном формате</li>
+                          <li>нам важно, чтобы человек был мотивирован и готов учиться</li>
+                        </ul>
+                        <p>Отбор помогает не тратить время впустую — ни твоё, ни наше.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border">
+            <div class="borderline"></div>
+            <img loading="lazy"
+              src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992a6f967054e9dea43b2_Green%20Splitter.svg"
+              alt="" class="border-icon_left" />
+            <img loading="lazy"
+              src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68a992c8f124bd7d1baa1923_Green%20Splitter%20(1).svg"
+              alt="" class="border-icon_right" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- BLOCK 8 — CTA ФИНАЛЬНЫЙ -->
+    <!-- ============================================================ -->
+    <section id="apply" class="s-cta">
+      <div class="padding-global nopadding">
+        <div class="container-large flex-center">
+          <div class="cta_wrap">
+            <div class="gap-large relative" style="align-items: flex-start;">
+              <div class="gap-medium">
+                <h2 class="hero-head cta_head" style="text-align: left;">Готов работать<span
+                    class="span-green medium"><br />в системе?</span></h2>
+              </div>
+              <p class="text-subhead" style="color: rgba(255,255,255,0.7); text-align: left;">Если ты хочешь
+                зарабатывать в покере и понимаешь,<br />что без структуры далеко не уедешь — подавай заявку.</p>
+              <div>
+                <a href="https://t.me/garygarryson" target="_blank" class="rainbow-btn">Подать заявку в фонд</a>
+              </div>
+            </div>
+            <div class="gradient_blur_mobile"></div>
+          </div>
+        </div>
+      </div>
+      <img src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68aa3681e6a3075a7b739bcf_green-glow.svg"
+        loading="lazy" alt="" class="glow-bg"
+        style="position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:120%;opacity:0.7;pointer-events:none;z-index:0;" />
+    </section>
+
+
+    <!-- ============================================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
+    <section id="play-mode" class="s-footer">
+      <div class="padding-global">
+        <div class="container-medium">
+          <div class="padding-section-medium is-footer">
+            <div class="container-small">
+              <div class="cardimg_wrap">
+                <img
+                  src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68ac3687b4aacb20915dd29a_card-heart.avif"
+                  loading="lazy" width="484" alt="" class="card1" />
+                <img
+                  src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68ac36878c580171f035312c_card-spade.avif"
+                  loading="lazy" width="484" alt="" class="card2" />
+              </div>
+              <div class="gap-xlarge align-center relative">
+                <div class="gap-medium">
+                  <h2 class="hero-head footer_title">Хочешь зарабатывать<br /><span class="span-greenbold">в
+                      покере?</span></h2>
+                </div>
+                <a href="https://t.me/garygarryson" target="_blank" class="button w-button">Подать заявку!</a>
+                <p class="footer_par">GaryGarryson — покерный фонд для серьёзных игроков. Мы предоставляем полное
+                  финансирование, профессиональное обучение и структурированную систему роста. Все финансовые риски
+                  берёт на себя команда. Данный сайт не является игорным заведением и не предлагает услуги азартных игр.
+                </p>
+                <div class="divider"></div>
+                <div class="container-full space-between cc-footer">
+                  <div class="txt_footer">GaryGarryson © 2026</div>
+                  <div class="container-gap-latge">
+                    <a href="#" class="footer_link">Telegram</a>
+                    <a href="#" class="footer_link">Discord</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top_noise"></div>
+      <img
+        src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/68ac34111fa118ad414f5c89_green-glow%20(1).svg"
+        loading="lazy" alt="" class="glow-bg footer" />
+    </section>
+
+  </main>
+
+  <!-- jQuery & Webflow JS -->
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=68a98c9826dab9f7a78eef18"
+    type="text/javascript" crossorigin="anonymous"></script>
+  <script src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/js/webflow.schunk.36b8fb49256177c8.js"
+    type="text/javascript" crossorigin="anonymous"></script>
+  <script src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/js/webflow.schunk.e03cab218f4ef57f.js"
+    type="text/javascript" crossorigin="anonymous"></script>
+  <script src="https://cdn.prod.website-files.com/68a98c9826dab9f7a78eef18/js/webflow.8746f3b9.1de1e0f84cd853bb.js"
+    type="text/javascript" crossorigin="anonymous"></script>
+
+  <!-- Card animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll(
+        '.features_div_wrap:not(.features_div_wrap_large)'
+      );
+
+      if (!cards.length) return;
+
+      let isDesktop = window.innerWidth >= 992;
+
+      function applyInitialStyles() {
+        isDesktop = window.innerWidth >= 992;
+
+        cards.forEach(card => {
+          const title = card.querySelector('.item_title');
+          const desc = card.querySelector('.card_par');
+          if (!title || !desc) return;
+
+          if (isDesktop) {
+            desc.style.opacity = 0;
+            desc.style.transform = 'translateY(100%)';
+            desc.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+            title.style.transition = 'bottom 0.35s ease';
+          } else {
+            title.style.bottom = '';
+            title.style.transition = '';
+            desc.style.opacity = '';
+            desc.style.transform = '';
+            desc.style.transition = '';
+          }
+        });
+      }
+
+      cards.forEach(card => {
+        const title = card.querySelector('.item_title');
+        const desc = card.querySelector('.card_par');
+        if (!title || !desc) return;
+
+        card.addEventListener('mouseenter', () => {
+          if (!isDesktop) return;
+          const descH = desc.offsetHeight;
+          const shift = descH + 40;
+          title.style.bottom = `${shift}px`;
+          desc.style.opacity = 1;
+          desc.style.transform = 'translateY(0)';
+        });
+
+        card.addEventListener('mouseleave', () => {
+          if (!isDesktop) return;
+          title.style.bottom = '';
+          desc.style.opacity = 0;
+          desc.style.transform = 'translateY(100%)';
+        });
+      });
+
+      applyInitialStyles();
+
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(applyInitialStyles, 150);
+      });
+    });
+  </script>
+
+  <!-- FAQ accordion -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const allItems = document.querySelectorAll('.accord_item');
+      allItems.forEach(item => {
+        item.querySelector('.accord_triger').addEventListener('click', () => {
+          const answer = item.querySelector('.accord_answer');
+          const isOpen = item.classList.contains('is-active');
+          allItems.forEach(other => {
+            if (other !== item && other.classList.contains('is-active')) {
+              other.classList.remove('is-active');
+              other.querySelector('.accord_answer').style.maxHeight = '0';
+            }
+          });
+          if (isOpen) {
+            item.classList.remove('is-active');
+            answer.style.maxHeight = '0';
+          } else {
+            item.classList.add('is-active');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
+      });
+    });
+  </script>
+
+  <!-- Interactive cursor -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dot = document.getElementById('cursorDot');
+      const ring = document.getElementById('cursorRing');
+      if (!dot || !ring) return;
+
+      let mx = 0, my = 0, rx = 0, ry = 0;
+
+      document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        dot.style.left = mx + 'px';
+        dot.style.top = my + 'px';
+      });
+
+      function animateRing() {
+        rx += (mx - rx) * 0.15;
+        ry += (my - ry) * 0.15;
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        requestAnimationFrame(animateRing);
+      }
+      animateRing();
+
+      const hoverTargets = document.querySelectorAll('a, button, .w-button, .accord_triger, .who-card, .step-card, .features_div_wrap');
+      hoverTargets.forEach(el => {
+        el.addEventListener('mouseenter', () => { dot.classList.add('hover'); ring.classList.add('hover'); });
+        el.addEventListener('mouseleave', () => { dot.classList.remove('hover'); ring.classList.remove('hover'); });
+      });
+
+      // Hide cursor when leaving window
+      document.addEventListener('mouseleave', () => { dot.style.opacity = '0'; ring.style.opacity = '0'; });
+      document.addEventListener('mouseenter', () => { dot.style.opacity = '1'; ring.style.opacity = '1'; });
+    });
+  </script>
+
+  <!-- Ripple click effect -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[ripple-effect]').forEach(el => {
+        el.addEventListener('click', function (e) {
+          const rect = el.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height) * 2;
+          const wave = document.createElement('div');
+          wave.className = 'ripple-wave';
+          wave.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size / 2}px;top:${e.clientY - rect.top - size / 2}px`;
+          el.appendChild(wave);
+          setTimeout(() => wave.remove(), 700);
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

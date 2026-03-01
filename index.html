@@ -500,83 +500,65 @@
       z-index: 1;
     }
 
-    /* ===== FAQ — shadcn card style, dark theme ===== */
+    /* ===== FAQ — separate cards, GTO Wizard style ===== */
     .faq_wrap {
       width: 100%;
-      border-radius: 0.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(255, 255, 255, 0.02);
-      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
     }
 
     .accord_item {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-      background: transparent !important;
-      border-radius: 0 !important;
-      border-top: none !important;
-      border-left: none !important;
-      border-right: none !important;
+      border: 1px solid rgba(255, 255, 255, 0.08) !important;
+      background: rgba(255, 255, 255, 0.02) !important;
+      border-radius: 0.75rem !important;
       padding: 0 !important;
-    }
-
-    .accord_item:last-child {
-      border-bottom: none !important;
+      overflow: hidden;
     }
 
     .accord_triger {
       display: flex !important;
       align-items: center !important;
       justify-content: space-between !important;
-      padding: 1rem 1.25rem !important;
+      padding: 1.25rem 1.5rem !important;
       cursor: none;
       gap: 1.5rem;
       user-select: none;
-      transition: background 0.15s ease;
-    }
-
-    .accord_triger:hover {
-      background: rgba(255, 255, 255, 0.03);
     }
 
     .question-txt {
-      font-size: 0.9375rem;
+      font-size: 1rem;
       font-weight: 500;
       color: #fff;
-      line-height: 1.6;
+      line-height: 1.5;
       flex: 1;
     }
 
     .accord_icon_wrap {
       flex-shrink: 0;
+      width: 24px;
+      height: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 0.2s ease;
-    }
-
-    .accord_icon_wrap svg path {
-      transition: stroke 0.2s ease;
+      transition: transform 0.25s ease;
     }
 
     .accord_item.is-active .accord_icon_wrap {
-      transform: rotate(180deg);
-    }
-
-    .accord_item.is-active .accord_icon_wrap svg path {
-      stroke: #aafbb2;
+      transform: rotate(45deg);
     }
 
     .accord_answer {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.2s ease-out;
+      transition: max-height 0.25s ease-out;
     }
 
     .accord_par {
-      padding: 0 1.25rem 1.25rem !important;
-      font-size: 0.875rem;
-      color: rgba(255, 255, 255, 0.55);
-      line-height: 1.65;
+      padding: 0 1.5rem 1.5rem !important;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.5);
+      line-height: 1.7;
       margin: 0 !important;
     }
 
@@ -1278,8 +1260,8 @@
                     <div class="accord_triger">
                       <div class="question-txt">Что нужно, чтобы попасть на обучение?</div>
                       <div class="accord_icon_wrap">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 4v12M4 10h12" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                       </div>
                     </div>
@@ -1300,8 +1282,8 @@
                     <div class="accord_triger">
                       <div class="question-txt">Можно совмещать обучение и основную работу?</div>
                       <div class="accord_icon_wrap">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 4v12M4 10h12" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                       </div>
                     </div>
@@ -1318,8 +1300,8 @@
                     <div class="accord_triger">
                       <div class="question-txt">Нужны ли какие-то вложения?</div>
                       <div class="accord_icon_wrap">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 4v12M4 10h12" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                       </div>
                     </div>
@@ -1335,8 +1317,8 @@
                     <div class="accord_triger">
                       <div class="question-txt">Сколько времени нужно в неделю?</div>
                       <div class="accord_icon_wrap">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 4v12M4 10h12" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                       </div>
                     </div>
@@ -1358,8 +1340,8 @@
                     <div class="accord_triger">
                       <div class="question-txt">Что я буду делать <strong>каждый день</strong>?</div>
                       <div class="accord_icon_wrap">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 4v12M4 10h12" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                       </div>
                     </div>
@@ -1386,8 +1368,8 @@
                     <div class="accord_triger">
                       <div class="question-txt">Можно ли начать <strong>с нуля, без опыта вообще</strong>?</div>
                       <div class="accord_icon_wrap">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 4v12M4 10h12" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                       </div>
                     </div>
@@ -1409,8 +1391,8 @@
                     <div class="accord_triger">
                       <div class="question-txt">Есть ли отбор и почему?</div>
                       <div class="accord_icon_wrap">
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="m4.5 7.2 3.793 3.793a1 1 0 0 0 1.414 0L13.5 7.2" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 4v12M4 10h12" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
                       </div>
                     </div>
